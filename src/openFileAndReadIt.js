@@ -4,10 +4,10 @@ const path = require('path');
 const fileEmitListener = require('./fileEmitListener');
 
 async function openFileAndReadIt(filename) {
-  const pathnameToCommandFile = path.join(__dirname, filename);
+  const pathnameToCreatedFile = path.join(__dirname, filename);
 
   try {
-    const fileEmitter = await fsPromises.open(pathnameToCommandFile, 'r');
+    const fileEmitter = await fsPromises.open(pathnameToCreatedFile, 'r');
 
     fileEmitListener(fileEmitter);
 

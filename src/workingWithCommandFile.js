@@ -1,6 +1,6 @@
 const { COMMANDS_OBJECT } = require('./constants/commands');
 
-function workingWithCommandFile(command, fileWithType) {
-  COMMANDS_OBJECT[command](fileWithType);
+function workingWithCommandFile(command, fileWithType, newFileType) {
+  COMMANDS_OBJECT[command]({ fileType: fileWithType, newFileType });
 }
-module.exports = Object.freeze(workingWithCommandFile);
+module.exports = workingWithCommandFile;
