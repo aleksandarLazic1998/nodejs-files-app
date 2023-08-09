@@ -1,4 +1,5 @@
 const createAFile = require('../FileHandlingFunctions/createAFile');
+const deleteAFile = require('../FileHandlingFunctions/deleteAFile');
 const renameTheFile = require('../FileHandlingFunctions/renameTheFile');
 
 const COMMANDS_OBJECT = {
@@ -8,7 +9,9 @@ const COMMANDS_OBJECT = {
   'rename the file': ({ fileType, newFileType }) => {
     renameTheFile(fileType, newFileType);
   },
-  'delete the file': '',
+  'delete the file': ({ fileType }) => {
+    deleteAFile(fileType);
+  },
   'add to the file': '',
 };
 

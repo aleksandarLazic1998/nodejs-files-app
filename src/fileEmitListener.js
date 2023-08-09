@@ -8,6 +8,8 @@ async function fileEmitListener(fileEmitter) {
     const command = findMatchingCommand(fileData).value;
     const fileThatWeAreWorkingOn = extractFileNameWithRegex(fileData).value;
 
+    console.log(fileThatWeAreWorkingOn);
+
     let newTextFile = '';
     if (command === 'rename the file') {
       newTextFile = getNewFilenameFromSubstring(fileData);
