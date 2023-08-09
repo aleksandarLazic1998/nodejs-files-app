@@ -1,8 +1,7 @@
 function getContent(data) {
-  const keyword = 'content:';
-  const startIndex = data.indexOf(keyword) + keyword.length;
+  const _idx = data.indexOf('content: ');
+  const fileData = data.substring(data.length + 1, _idx + 9);
 
-  const content = data.slice(startIndex);
-  return content.trim();
+  return fileData;
 }
 module.exports = getContent;
