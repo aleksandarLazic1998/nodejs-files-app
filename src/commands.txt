@@ -1,1 +1,1 @@
-delete the file filename.txt 
+add to the file file.txt content: "Hi my name is aleksandar lazic."
